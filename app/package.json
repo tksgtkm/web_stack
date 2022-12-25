@@ -1,0 +1,22 @@
+{
+  "name": "web_stack_app",
+  "version": "1.0.0",
+  "description": "docker env",
+  "main": "server.js",
+  "scripts": {
+    "test": "nodemon src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tksgtkm/web_stack.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tksgtkm/web_stack/issues"
+  },
+  "dependencies": {
+    "express": "^4.16.1"
+  },
+  "homepage": "https://github.com/tksgtkm/web_stack#readme"
+}
