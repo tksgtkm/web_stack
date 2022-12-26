@@ -1,12 +1,13 @@
-version: "3.7"
+version: "3.8"
 services:
-  app:
-    image: node:18.12.1
-    working_dir: /usr/src/app
-    tty: true
+  nodeserver:
+    build:
+      context: ./app
     ports:
-      - '3000:3000'
-    volumes:
-      - ./:/usr/src/app
-    command: >
-      bash -c "npm install && npm install nodemon -g && nodemon src/server.js"
+      - "5000:5000"
+  nginx:
+    restart: always
+    build:
+      context: ./nginx
+    ports:
+      - "80:80"
